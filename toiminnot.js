@@ -1,8 +1,7 @@
 let energia = 0;
-
-let otus = document.getElementsByTagName("img");
+let laskuri = document.getElementById("laskuri");
 
 function klikkaus(){
     energia += 1;
-    console.log(energia);
+    laskuri.innerHTML = `Energian määrä: <b>${energia}</b>`
 }

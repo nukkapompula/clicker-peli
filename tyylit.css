@@ -1,10 +1,28 @@
 body {
     font-family: Chiller, Arial;
     font-size: 200%;
+    text-align: center;
     background-color: rgb(34, 66, 55);
+    color: rgb(201, 227, 214);
 }
 
 img {
     width: 154px;
     height: 230px;
+}
+
+nav {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+div {
+    margin: 12px;
+    padding: 6px;
+    border: 3px dotted rgb(201, 227, 214);
+}
+
+div:nth-child(even) {
+    border: none;
 }
