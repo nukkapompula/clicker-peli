@@ -1,4 +1,10 @@
-p {
+body {
     font-family: Chiller, Arial;
     font-size: 200%;
+    background-color: rgb(34, 66, 55);
+}
+
+img {
+    width: 154px;
+    height: 230px;
 }
