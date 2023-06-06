@@ -10,19 +10,24 @@
 <body>
     <h1>Avaruusrumilus</h1>
     <p>
-        Klikkaa otusta haaliaksesi energiaa. Iljetys saattanee kaikota maisemia pilaamasta, 
-        mikäli keräät energiaa kylliksi! Voit päivittää rohmuamiskykyjäsi tuhlaamalla 
-        energiaa erinäisiin hilavitkuttimiin, jotka takuulla maksavat itsensä takaisin ajan 
-        myötä.
+        Klikkaa allaolevaa otusta haaliaksesi energiaa. Iljetys saattanee kaikota maisemia 
+        pilaamasta, mikäli keräät energiaa kylliksi! Voit päivittää rohmuamiskykyjäsi 
+        tuhlaamalla energiaa sivuilla mainostettuihin hilavitkuttimiin, jotka takuulla 
+        maksavat itsensä takaisin ajan myötä.
     </p>
 
     <nav>
-        <div>moi</div>
-        <div><img src="drion.png" alt="avaruusrumilus" onclick="klikkaus()"></div>
+        <div>
+            <p class="info">
+                Energiakerroin hyödyntää uusinta peptiditeknologiaa. Sen avulla tienaat 
+                jopa kaksin verroin energiaa klikkausta kohden!
+            </p>
+        </div>
+        <div><img src="drion.png" id="drion" alt="avaruusrumilus" onclick="klikkaus()"></div>
         <div>moi</div>
     </nav>
 
-    <p id="laskuri">Energian määrä: </p>
+    <p id="laskuri">Energian määrä: <b>0</b></p>
 
     <script src="toiminnot.js"></script>
 </body>

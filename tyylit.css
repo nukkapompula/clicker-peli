@@ -1,12 +1,13 @@
 body {
     font-family: Chiller, Arial;
     font-size: 200%;
+    line-height: 80%;
     text-align: center;
     background-color: rgb(34, 66, 55);
     color: rgb(201, 227, 214);
 }
 
-img {
+#drion {
     width: 154px;
     height: 230px;
 }
@@ -19,10 +20,16 @@ nav {
 
 div {
     margin: 12px;
-    padding: 6px;
+    padding: 0px 10px;
     border: 3px dotted rgb(201, 227, 214);
+    background-color: rgb(29, 57, 47);
 }
 
 div:nth-child(even) {
     border: none;
+    background-color: rgb(34, 66, 55);
+}
+
+.info {
+    font-size: 80%;
 }
