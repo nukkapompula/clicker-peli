@@ -44,7 +44,7 @@ button {
     color: rgb(201, 227, 214);
 }
 
-.kerroinPainike {
+#ostaKerroin, #kerroinOn, #kerroinOff {
     display: none;
     font-family: Chiller, Arial;
     font-size: 80%;

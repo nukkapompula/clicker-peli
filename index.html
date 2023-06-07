@@ -12,7 +12,7 @@
     <p>
         Klikkaa keskellä majailevaa otusta haaliaksesi energiaa. Iljetys kaikonnee maisemia 
         pilaamasta, mikäli keräät energiaa kylliksi! Voit päivittää rohmuamiskykyjäsi 
-        tuhlaamalla energiaa sivuilla mainostettuihin hilavitkuttimiin, jotka 
+        tuhlaamalla energiaa reunoilla mainostettuihin hilavitkuttimiin, jotka 
         <ins>takuulla</ins> maksavat itsensä takaisin ajan myötä.
     </p>
 
@@ -25,10 +25,13 @@
                 Hinta tänään vaivaiset <b>50 energiaa</b>!
             </p>
             <button id="ostaKerroin">Osta</button>
-            <button class="kerroinPainike">Ota käyttöön</button>
-            <button class="kerroinPainike">Poista käytöstä</button>
+            <button id="kerroinOn">Ota käyttöön</button>
+            <button id="kerroinOff">Poista käytöstä</button>
         </div>
-        <div><img src="drion.png" id="drion" alt="avaruusrumilus" onclick="klikkaus()"></div>
+        <div>
+            <img src="drion.png" id="drion" alt="avaruusrumilus" onclick="klikkaus()">
+            <p id="laskuri">Energian määrä: <b>0</b></p>
+        </div>
         <div>
             <p class="info">
                 Etkö tahdo särkeä hiiripoloisesi korvia? Sitten <ins>energiageneraattori</ins> 
@@ -38,8 +41,6 @@
             </p>
         </div>
     </nav>
-
-    <p id="laskuri">Energian määrä: <b>0</b></p>
 
     <script src="toiminnot.js"></script>
 </body>
