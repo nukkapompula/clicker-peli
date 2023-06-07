@@ -44,7 +44,7 @@ button {
     color: rgb(201, 227, 214);
 }
 
-#ostaKerroin, #kerroinOn, #kerroinOff {
+#kerroinPäälle, #kerroinPois {
     display: none;
     font-family: Chiller, Arial;
     font-size: 80%;
