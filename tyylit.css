@@ -44,7 +44,7 @@ button {
     color: rgb(201, 227, 214);
 }
 
-#kerroinPäälle, #kerroinPois {
+#kerroinPäälle, #kerroinPois, #genPäälle, #genPois {
     display: none;
     font-family: Chiller, Arial;
     font-size: 80%;
