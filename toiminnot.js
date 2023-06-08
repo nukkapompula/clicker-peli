@@ -45,7 +45,7 @@ function kerroinOff(){
 function genOn(){
     console.log("laitoit generaattorin päälle")
     generaattori = true;
-    ajastin = setInterval(testi, 1000);
+    ajastin = setInterval(puserra, 1001);
     document.getElementById("genPäälle").style.display = "none";
     document.getElementById("genPois").style.display = "inline-block";
 }
@@ -58,8 +58,12 @@ function genOff(){
     document.getElementById("genPäälle").style.display = "inline-block";
 }
 
-function testi(){
-    energia += 1;
+function puserra(){
+    if(arpa(1, 2)==1){
+        energia -= 1;
+    } else {
+        energia += 1;
+    }
     laskuri.innerHTML = `Energian määrä: <b>${energia}</b>`;
 }
 

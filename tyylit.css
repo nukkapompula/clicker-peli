@@ -12,6 +12,20 @@ body {
     height: 230px;
 }
 
+#kerroinKuva {
+    width: 150px;
+    height: 141px;
+    margin: 4px;
+    float: left;
+}
+
+#generaattoriKuva {
+    width: 150px;
+    height: 162px;
+    margin: 4px;
+    float: right;
+}
+
 nav {
     width: 100%;
     display: grid;
@@ -32,16 +46,6 @@ div:nth-child(even) {
 
 .info {
     font-size: 80%;
-}
-
-button {
-    font-family: Chiller, Arial;
-    font-size: 80%;
-    line-height: 80%;
-    margin: 4px;
-    text-align: center;
-    background-color: rgb(22, 42, 35);
-    color: rgb(201, 227, 214);
 }
 
 #kerroinPäälle, #kerroinPois, #genPäälle, #genPois {
