@@ -2,6 +2,7 @@ let energia = 0;
 let laskuri = document.getElementById("laskuri");
 
 var tuplapisteet = false;
+var generaattori = false;
 
 function klikkaus(){
     // lisää energiaa
@@ -41,7 +42,11 @@ function kerroinOff(){
 }
 
 function genOn(){
-    let puserra = setInterval(arpa(1, 2), 1000);
+    console.log("laitoit generaattorin päälle")
+    generaattori = true;
+    energiaGeneraattori();
+    document.getElementById("genPäälle").style.display = "none";
+    document.getElementById("genPois").style.display = "inline-block";
     if(puserra==1){
         energia -= 1;
         laskuri.innerHTML = `Energian määrä: <b>${energia}</b>`;
@@ -49,6 +54,29 @@ function genOn(){
         energia += 1;
         laskuri.innerHTML = `Energian määrä: <b>${energia}</b>`;
     }
+}
+
+function genOff(){
+    console.log("sammutit generaattorin")
+    generaattori = false;
+    document.getElementById("genPois").style.display = "none";
+    document.getElementById("genPäälle").style.display = "inline-block";
+}
+
+function energiaGeneraattori(){
+    setInterval(testi, 2000);
+    /* if(arvo==1){
+        energia -= 1;
+        laskuri.innerHTML = `Energian määrä: <b>${energia}</b>`;
+    } else {
+        energia += 1;
+        laskuri.innerHTML = `Energian määrä: <b>${energia}</b>`;
+    } */
+}
+
+function testi(){
+    energia += 1;
+    laskuri.innerHTML = `Energian määrä: <b>${energia}</b>`;
 }
 
 function arpa(min, max){
