@@ -12,7 +12,15 @@ function klikkaus(){
     } else {
         energia += 1;
     }
-    laskuri.innerHTML = `Energian määrä: <b>${energia}</b>`;
+
+    if(document.getElementById("ohjeet").innerHTML != "Onnittelut! Voitit pelin!"){
+        laskuri.innerHTML = `Energian määrä: <b>${energia}</b>`;
+    }
+
+    if(energia<0){
+        energia = 0;
+        laskuri.innerHTML = `Energian määrä: <b>${energia}</b>`;
+    }
 
     // tarkista energian riittävyys kertoimeen
     if(energia > 4 && tuplapisteet == false){
@@ -26,10 +34,7 @@ function klikkaus(){
 
     // päätä peli
     if(energia>15){
-        document.getElementById("drion").src = "palkinto.png";
-        document.getElementById("drion").style.width = "140px";
-        document.getElementById("drion").style.height = "230px";
-        document.getElementById("ohjeet").innerHTML = "Onnittelut! Voitit pelin!";
+        voitto();
     }
 }
 
@@ -69,7 +74,10 @@ function tuplaa(){
     } else {
         energia += 2;
     }
-    laskuri.innerHTML = `Energian määrä: <b>${energia}</b>`;
+
+    if(document.getElementById("ohjeet").innerHTML != "Onnittelut! Voitit pelin!"){
+        laskuri.innerHTML = `Energian määrä: <b>${energia}</b>`;
+    }
 }
 
 function puserra(){
@@ -78,9 +86,26 @@ function puserra(){
     } else {
         energia += 1;
     }
-    laskuri.innerHTML = `Energian määrä: <b>${energia}</b>`;
+
+    if(energia<0){
+        energia = 0;
+        laskuri.innerHTML = `Energian määrä: <b>${energia}</b>`;
+    }
+
+    if(energia>15){
+        voitto();
+    } else if(document.getElementById("ohjeet").innerHTML != "Onnittelut! Voitit pelin!"){
+        laskuri.innerHTML = `Energian määrä: <b>${energia}</b>`;
+    }
 }
 
 function arpa(min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function voitto(){
+    document.getElementById("drion").src = "palkinto.png";
+    document.getElementById("drion").style.width = "140px";
+    document.getElementById("drion").style.height = "230px";
+    document.getElementById("ohjeet").innerHTML = "Onnittelut! Voitit pelin!";
 }
