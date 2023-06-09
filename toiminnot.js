@@ -108,4 +108,11 @@ function voitto(){
     document.getElementById("drion").style.width = "140px";
     document.getElementById("drion").style.height = "230px";
     document.getElementById("ohjeet").innerHTML = "Onnittelut! Voitit pelin!";
+    document.getElementsByTagName("div")[0].innerHTML = "";
+    document.getElementsByTagName("div")[2].innerHTML = "";
+    document.getElementsByTagName("div")[0].style.border = "none";
+    document.getElementsByTagName("div")[2].style.border = "none";
+    document.getElementsByTagName("div")[0].style.backgroundColor = "rgb(34, 66, 55)";
+    document.getElementsByTagName("div")[2].style.backgroundColor = "rgb(34, 66, 55)";
+    document.getElementById("uusiPeli").style.display = "inline-block";
 }
