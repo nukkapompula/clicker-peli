@@ -8,13 +8,10 @@ var ajastin = null;
 function klikkaus(){
     // lisää energiaa
     if(tuplapisteet){
-        if(arpa(1, 2)==1){
-            energia -= 3;
-        } else {
-            energia += 1;
-        }
+        tuplaa();
+    } else {
+        energia += 1;
     }
-    energia += 1;
     laskuri.innerHTML = `Energian määrä: <b>${energia}</b>`;
 
     // tarkista energian riittävyys kertoimeen
@@ -56,6 +53,15 @@ function genOff(){
     clearInterval(ajastin);
     document.getElementById("genPois").style.display = "none";
     document.getElementById("genPäälle").style.display = "inline-block";
+}
+
+function tuplaa(){
+    if(arpa(1, 2)==1){
+        energia -= 2;
+    } else {
+        energia += 2;
+    }
+    laskuri.innerHTML = `Energian määrä: <b>${energia}</b>`;
 }
 
 function puserra(){
