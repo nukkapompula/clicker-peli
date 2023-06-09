@@ -23,6 +23,14 @@ function klikkaus(){
     if(energia > 9 && generaattori == false){
         document.getElementById("genPäälle").style.display = "inline-block";
     }
+
+    // päätä peli
+    if(energia>15){
+        document.getElementById("drion").src = "palkinto.png";
+        document.getElementById("drion").style.width = "140px";
+        document.getElementById("drion").style.height = "230px";
+        document.getElementById("ohjeet").innerHTML = "Onnittelut! Voitit pelin!";
+    }
 }
 
 function kerroinOn(){
