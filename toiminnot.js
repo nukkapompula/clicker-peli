@@ -42,6 +42,7 @@ function klikkaus(){
 function kerroinOn(){
     console.log("laitoit kertoimen päälle");
     tuplapisteet = true;
+    document.getElementById("kerroinKuva").style.transform = "rotate(-13deg)";
     document.getElementById("kerroinPäälle").style.display = "none";
     document.getElementById("kerroinPois").style.display = "inline-block";
 }
@@ -49,6 +50,7 @@ function kerroinOn(){
 function kerroinOff(){
     console.log("sammutit kertoimen");
     tuplapisteet = false;
+    document.getElementById("kerroinKuva").style.transform = "none";
     document.getElementById("kerroinPois").style.display = "none";
     document.getElementById("kerroinPäälle").style.display = "inline-block";
 }
@@ -56,6 +58,7 @@ function kerroinOff(){
 function genOn(){
     console.log("laitoit generaattorin päälle")
     generaattori = true;
+    document.getElementById("generaattoriKuva").style.transform = "rotate(13deg)";
     ajastin = setInterval(puserra, 1001);
     document.getElementById("genPäälle").style.display = "none";
     document.getElementById("genPois").style.display = "inline-block";
@@ -64,6 +67,7 @@ function genOn(){
 function genOff(){
     console.log("sammutit generaattorin")
     generaattori = false;
+    document.getElementById("generaattoriKuva").style.transform = "none";
     clearInterval(ajastin);
     document.getElementById("genPois").style.display = "none";
     document.getElementById("genPäälle").style.display = "inline-block";
