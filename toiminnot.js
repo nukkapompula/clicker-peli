@@ -1,4 +1,5 @@
 let energia = 0;
+let maksimi = arpa(20, 30);
 let laskuri = document.getElementById("laskuri");
 
 var tuplapisteet = false;
@@ -33,7 +34,7 @@ function klikkaus(){
     }
 
     // päätä peli
-    if(energia>15){
+    if(energia > maksimi){
         voitto();
     }
 }
@@ -87,12 +88,12 @@ function puserra(){
         energia += 1;
     }
 
-    if(energia<0){
+    if(energia < 0){
         energia = 0;
         laskuri.innerHTML = `Energian määrä: <b>${energia}</b>`;
     }
 
-    if(energia>15){
+    if(energia > maksimi){
         voitto();
     } else if(document.getElementById("ohjeet").innerHTML != "Onnittelut! Voitit pelin!"){
         laskuri.innerHTML = `Energian määrä: <b>${energia}</b>`;
@@ -115,4 +116,5 @@ function voitto(){
     document.getElementsByTagName("div")[0].style.backgroundColor = "rgb(34, 66, 55)";
     document.getElementsByTagName("div")[2].style.backgroundColor = "rgb(34, 66, 55)";
     document.getElementById("uusiPeli").style.display = "inline-block";
+    document.getElementById("drion").id = "palkinto";
 }
