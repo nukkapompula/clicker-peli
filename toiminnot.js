@@ -1,5 +1,5 @@
 let energia = 0;
-let maksimi = arpa(20, 30);
+let maksimi = arpa(200, 300);
 let laskuri = document.getElementById("laskuri");
 
 var tuplapisteet = false;
@@ -14,22 +14,24 @@ function klikkaus(){
         energia += 1;
     }
 
+    // energian lisäys ellei peli ole jo ohi
     if(document.getElementById("ohjeet").innerHTML != "Onnittelut! Voitit pelin!"){
         laskuri.innerHTML = `Energian määrä: <b>${energia}</b>`;
     }
 
+    // energia ei pääse alle nollan
     if(energia<0){
         energia = 0;
         laskuri.innerHTML = `Energian määrä: <b>${energia}</b>`;
     }
 
     // tarkista energian riittävyys kertoimeen
-    if(energia > 4 && tuplapisteet == false){
+    if(energia > 49 && tuplapisteet == false){
         document.getElementById("kerroinPäälle").style.display = "inline-block";
     }
 
     // tarkista energian riittävyys generaattoriin
-    if(energia > 9 && generaattori == false){
+    if(energia > 99 && generaattori == false){
         document.getElementById("genPäälle").style.display = "inline-block";
     }
 
@@ -40,7 +42,6 @@ function klikkaus(){
 }
 
 function kerroinOn(){
-    console.log("laitoit kertoimen päälle");
     tuplapisteet = true;
     document.getElementById("kerroinKuva").style.transform = "rotate(-13deg)";
     document.getElementById("kerroinPäälle").style.display = "none";
@@ -48,7 +49,6 @@ function kerroinOn(){
 }
 
 function kerroinOff(){
-    console.log("sammutit kertoimen");
     tuplapisteet = false;
     document.getElementById("kerroinKuva").style.transform = "none";
     document.getElementById("kerroinPois").style.display = "none";
@@ -56,7 +56,6 @@ function kerroinOff(){
 }
 
 function genOn(){
-    console.log("laitoit generaattorin päälle")
     generaattori = true;
     document.getElementById("generaattoriKuva").style.transform = "rotate(13deg)";
     ajastin = setInterval(puserra, 1001);
@@ -65,7 +64,6 @@ function genOn(){
 }
 
 function genOff(){
-    console.log("sammutit generaattorin")
     generaattori = false;
     document.getElementById("generaattoriKuva").style.transform = "none";
     clearInterval(ajastin);

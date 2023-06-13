@@ -17,6 +17,14 @@
     }
 }
 
+@keyframes jippii {
+    0% {transform: none;}
+    25% {transform: skewX(-5deg);}
+    50% {transform: none;}
+    75% {transform: skewX(5deg);}
+    100% {transform: none;}
+}
+
 body {
     font-family: Chiller, Arial;
     font-size: 200%;
@@ -54,6 +62,10 @@ body {
     height: 162px;
     margin: 4px;
     float: right;
+}
+
+#palkinto {
+    animation: jippii 2s ease 0s infinite normal;
 }
 
 nav {
